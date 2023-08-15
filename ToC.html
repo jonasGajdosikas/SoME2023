@@ -3,7 +3,8 @@ layout: default
 ---
 
 <ol>
-    {% for item in site.posts | reverse %}
+    {% assign revposts = site.posts | reverse %}
+    {% for item in revposts %}
     <li><h3><a href="{{ item.url }}">
         {{ item.title }}
     </a></h3></li>
