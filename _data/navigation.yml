@@ -2,3 +2,7 @@
   link: /
 - name: About
   link: /about.html
+- name: Table of Contents
+  link: /ToC.html
+- name: Glossary
+  link: /glossary.html

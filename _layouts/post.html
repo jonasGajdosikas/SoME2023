@@ -2,13 +2,20 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<p>
-    {{ page.date | date_to_string }}
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
-    {% if author %}
-      - <a href="{{ author.url }}">{{ author.name }}</a>
-    {% endif %}
-  </p>
-
+<!--<h1>{{ page.title }}</h1> -->
 {{ content }}
+<p>
+  {% assign prev = site.posts | where: 'current', page.previous | first %}
+  {% if prev %}
+    <a href="{{ prev.url }}">previous</a>
+  {% else %}
+    previous
+  {% endif %}
+   | 
+  {% assign nextp = site.posts | where: 'current', page.nextpage | first %}
+  {% if nextp %}
+    <a href="{{ nextp.url }}">next</a>
+  {% else %}
+    next
+  {% endif %}
+</p>

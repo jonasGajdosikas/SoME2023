@@ -1,1 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-29T12:24:18+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SoME2023</title></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-15T16:07:38+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SoME2023</title><entry><title type="html">Motivation</title><link href="http://localhost:4000/2001/01/31/Motivation.html" rel="alternate" type="text/html" title="Motivation" /><published>2001-01-31T00:00:00+02:00</published><updated>2001-01-31T00:00:00+02:00</updated><id>http://localhost:4000/2001/01/31/Motivation</id><content type="html" xml:base="http://localhost:4000/2001/01/31/Motivation.html">&lt;h2 id=&quot;personal-story-time&quot;&gt;Personal story time&lt;/h2&gt;
+
+&lt;p&gt;When I was in high school, I got interested in TTRPGs (GURPS if anyone is interested). I quite liked playing around with dice, and with the most common roll being the &lt;a href=&quot;../../../glossary.html#ndk&quot;&gt;3d6&lt;/a&gt; I got quite interested in how the probabilities for each roll are calculated.
+I knew that somehow one vould calculate the odds for each possible result - &lt;a href=&quot;anydice.com&quot;&gt;people had done so already&lt;/a&gt;; but I was wondering if it was possible to find an explicit formula for each value.&lt;/p&gt;</content><author><name></name></author><summary type="html">Personal story time</summary></entry><entry><title type="html">Introduction</title><link href="http://localhost:4000/2001/01/30/Introduction.html" rel="alternate" type="text/html" title="Introduction" /><published>2001-01-30T00:00:00+02:00</published><updated>2001-01-30T00:00:00+02:00</updated><id>http://localhost:4000/2001/01/30/Introduction</id><content type="html" xml:base="http://localhost:4000/2001/01/30/Introduction.html">&lt;h2 id=&quot;first-calculations&quot;&gt;First calculations&lt;/h2&gt;
+
+&lt;p&gt;For 2d6 you could easily draw a table with the results of the roll to gain insight:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;first dice→&lt;br /&gt;second dice↓&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;6&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;1&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;2&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;3&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;4&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;5&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;6&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This then would show you the odds of each result:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If you add more dice, or additional rules, or both (e.g. 4d6, drop lowest for creating characters in DnD5e) this model quickly becomes unwieldy.
+An additional detriment was that my calculator, a TI-36x Pro, could not calculate such tables, so I had to find another solution.&lt;/p&gt;
+
+&lt;p&gt;One could naively try to calculate all the possibilities the dice could roll, but even with 3 dice you can’t use a table directly, and with nested loops in a program you can see the runtime rising exponentially&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Dice(d6)&lt;/th&gt;
+      &lt;th&gt;Size of event space&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;216&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;+1&lt;/td&gt;
+      &lt;td&gt;*6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">First calculations</summary></entry><entry><title type="html">Triangle numbers</title><link href="http://localhost:4000/2001/01/29/Triangle-numbers.html" rel="alternate" type="text/html" title="Triangle numbers" /><published>2001-01-29T00:00:00+02:00</published><updated>2001-01-29T00:00:00+02:00</updated><id>http://localhost:4000/2001/01/29/Triangle%20numbers</id><content type="html" xml:base="http://localhost:4000/2001/01/29/Triangle-numbers.html">&lt;h2 id=&quot;enter-triangle-numbers&quot;&gt;Enter triangle numbers&lt;/h2&gt;
+
+&lt;p&gt;When looking at the odds for 3d6, the beginning few - 1,3,6,10 - show a familiar pattern: the &lt;a href=&quot;https://oeis.org/A000217&quot;&gt;triangular numbers&lt;/a&gt;. T(n) is known to be \(\dfrac {n(n+1)}{2}\) . But when going further in, they begin to overestimate the result, and for the final numbers give way more – e.g. for &lt;a href=&quot;##&quot; title=&quot;it&apos;s number 16 for 18 so that the series starts at 1&quot;&gt;\(n_{16} =1\)&lt;/a&gt; it predicts \(\dfrac {16(16+1)}{2} = 136\)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;..\..\..\assets\images\Crosssections.gif&quot; alt=&quot;sequence of crossections of the event space of which we want to calculate the area&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One may notice, the discrepancy comes form the fact that certain combinations the formula would predict are, in fact, impossible.&lt;/p&gt;</content><author><name></name></author><summary type="html">Enter triangle numbers</summary></entry></feed>

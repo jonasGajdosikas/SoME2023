@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<ol>
+    {% for item in site.posts %}
+    <li><h3><a href="{{ item.url }}">
+        {{ item.title }}
+    </a></h3></li>
+    {% endfor %}
+</ol>
