@@ -1,7 +1,4 @@
 ---
-previous: Int
-current: Tri
-nextpage: Fix
 ---
 ## Enter triangle numbers
 
@@ -9,4 +6,4 @@ When looking at the odds for 3d6, the beginning few - 1,3,6,10 - show a familiar
 
 ![sequence of crossections of the event space of which we want to calculate the area](..\..\..\assets\images\Crosssections.gif)
 
-One may notice, the discrepancy comes form the fact that certain combinations the formula would predict are, in fact, impossible.
+One may notice, the discrepancy comes form the fact that certain combinations the formula would predict are, in fact, impossible. One such example is $$ 9=1+1+7 $$ as a d6 always is less than 7

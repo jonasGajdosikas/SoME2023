@@ -1,7 +1,4 @@
 ---
-previous: Mot
-current: Int
-nextpage: Tri
 ---
 ## First calculations
 
