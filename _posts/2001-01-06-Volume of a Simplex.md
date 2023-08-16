@@ -2,7 +2,7 @@
 ---
 ## Volume of a crosssection of a hypercube
 
-One may notice that for a while the crossection of a hypercube is a tetrahedron (a d4 for the dice nerds); and further speculate that the crosssection of an [n-hypercube](## "a hypercube in n dimensions") the crossection would be an [n-1-simplex](https://en.wikipedia.org/wiki/Simplex).
+One may notice that for a while the crosssection of a hypercube is a tetrahedron (a d4 for the dice nerds); and further speculate that the crosssection of an [n-hypercube](## "a hypercube in n dimensions") the crosssection would be an [n-1-simplex](https://en.wikipedia.org/wiki/Simplex).
 
 Thus the goal would be to first find a formula for the amount of spheres stacked in an n-simplex of side length m.
 

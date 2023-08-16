@@ -10,4 +10,4 @@ $$ p_n = \dfrac {n(n+1)}{2} - 3{\begin{cases} 0,  & \text{for}\; n \le 20 \\ {\d
 
 ### More dice
 
-Generalizing to more dice is a bit harder: we can't just use the triangle formula again. We need to figure out the formula for the crosssection of a hypercube. The $$ -3 \text{if} +3 \text{if} -1 \text{if} $$ trick also probably does not work
+Generalizing to more dice is a bit harder: we can't just use the triangle formula again. We need to figure out the formula for the crosssection of a hypercube. The $$ -3 \text{overcounting} +3 \text{undercounting} -1 \text{overcounting, again} $$ trick also probably does not work
