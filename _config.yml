@@ -1,7 +1,5 @@
-baseurl: "SoME2023/"
-collections:
-  authors:
-    output: true
+baseurl: "/SoME2023"
+permalink: none
 defaults:
   - scope:
       path: "assets/images"
